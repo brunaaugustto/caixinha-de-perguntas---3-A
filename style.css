@@ -44,9 +44,32 @@ footer p {
     margin: 0.6rem;
     border-radius: 0.6rem;
     font-size: 1vw;
+    backface-visibility: hidden;
 }
 
 .cartao:hover .cartao_conteudo{
     transform: rotate(180deg);
 }
 
+.cartao_conteudo{
+    background-color: bisque;
+    text-align: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms aese-in-out;
+
+}
+.cartao_conteudo_pergunta, .cartao_conteudo_resposta {
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.cartao_conteudo_resposta{
+    transform: rotateY(180deg);
+}
+.cartao_conteudo p{
+    margin-top: 1rem;
+    padding: 2rem;
+    margin-top: 4rem;
+}
